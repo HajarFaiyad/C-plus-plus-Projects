@@ -1,0 +1,68 @@
+//This file contains only Implementations of the zoo.h file
+
+#include <iostream>
+#include <string>
+#include "zoo.h"
+using namespace std;
+
+//constructors implementation:-
+Zoo::Zoo(){
+	id;
+	food;
+	location;
+	animalType;
+}
+Zoo::Zoo(int id, string food, string location, string animalType) {
+	
+	(*this).id = id;
+	(*this).food = food;
+	(*this).location = location;
+	(*this).animalType = animalType;
+
+}
+
+//------>Function/Methods implementations:-
+
+// **setter and getter for the id parameter 
+void Zoo::setID(int id) {
+	this->id = id;
+}
+int Zoo::getID() {
+	return id;
+}
+
+void Zoo::setFood(string food) {
+	//I use if conditions to limit the food's value to "grass","meat","fish"
+	
+	this->food = food;
+}
+string Zoo::getFood() {
+	return food;
+}
+
+void Zoo::setLocation(string location) {
+	//I use if conditions to limit the location's value to "grassland","oceanic","mountain"
+	
+	this->location = location;
+}
+string Zoo::getLocation() {
+	return location;
+}
+
+void Zoo::setAnimalType(string animalType) {
+	//I use if conditions to limit the animalType's value to "sea lion", "bear", "gazelle"
+	
+	this->animalType = animalType;
+}
+string Zoo::getAnimalType() {
+	return animalType;
+}
+
+//  **info method to print the information of a Zoo
+void Zoo::info() {
+	string zooInfo;
+	zooInfo = zooInfo + "id: " + to_string(id) + " animalType: " + animalType + " location: " + location + " food: " + food ;
+
+	cout<< zooInfo << endl;
+	
+}
